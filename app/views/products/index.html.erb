@@ -1,0 +1,13 @@
+<h1>Products List</h1>
+
+<% @products.each do |product| %>
+<h2><%= product.brand_name.upcase %></h2>
+<h3><%= product.category.upcase %></h3>
+<h3><%= product.mtype.upcase %></h3>
+<p><%= product.spec.upcase %></p>
+<%= link_to 'View detials', product_path(product.id) %><br/>
+<%= link_to 'Edit', edit_product_path(product.id) %>|
+<%= link_to 'Delete', product_path(product.id), :method => :delete, :confirm => "Do You Want To Delete This Product" %>
+<hr/>
+<% end %>
+<%= link_to "New", new_product_path %>

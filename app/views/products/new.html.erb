@@ -1,0 +1,32 @@
+<h1>Create New Product</h1>
+
+<% if @product.errors.any? %>
+<p>Errors : </p>
+ <ul>
+  <% @product.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for @product do |f| %>
+
+<%= f.label :brand_name, "Brand Name" %>
+<%= f.text_field :brand_name %><br/>
+
+<%= f.label :category, "Category" %>
+<%= f.text_field :category %><br/>
+
+<%= f.label :mtype, "Type" %>
+<%= f.text_field :mtype %><br/>
+
+<%= f.label :spec, "Spec" %>
+<%= f.text_area :spec %><br/>
+
+<%= f.label :status, "Status" %>
+<%= f.text_field :status %><br/>
+
+<%= f.submit "Create"  %>
+
+<% end %>

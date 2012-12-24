@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand_name: MyString
+  category: MyString
+  mtype: MyString
+  spec: MyText
+  status: MyString
+
+two:
+  brand_name: MyString
+  category: MyString
+  mtype: MyString
+  spec: MyText
+  status: MyString
